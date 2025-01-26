@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/images/logo.png";
 import {
   Navbar,
   Nav,
@@ -17,44 +18,49 @@ import {
 const CustomNavbar = () => {
   return (
     <Navbar bg="light" expand="lg" fixed="top">
-      <Container>
-        {/* Logo */}
-        <Navbar.Brand href="#home">
-          <img
-            src="https://via.placeholder.com/100x30?text=Logo"
-            alt="Logo"
-            className="d-inline-block align-top"
-          />
-        </Navbar.Brand>
+      <Container fluid>
+        {/* Gunakan grid system untuk membagi layout */}
+        <div className="row w-100 align-items-center">
+          {/* Kolom untuk Logo */}
+          <div className="col-3">
+            <Navbar.Brand href="#home">
+              <img
+                src={logo}
+                alt="Logo"
+                className="d-inline-block align-top"
+                style={{ width: "80px", height: "auto" }} // Atur ukuran logo
+              />
+            </Navbar.Brand>
+          </div>
 
-        {/* Toggle Button untuk Mobile */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          {/* Kolom untuk Search Bar */}
+          <div className="col-6">
+            <Form className="d-flex justify-content-center">
+              <FormControl
+                type="search"
+                placeholder="Cari barang..."
+                className="me-2"
+                aria-label="Search"
+                style={{ width: "100%" }}
+              />
+              <Button variant="outline-success">
+                <FontAwesomeIcon icon={faSearch} />
+              </Button>
+            </Form>
+          </div>
 
-        {/* Menu */}
-        <Navbar.Collapse id="basic-navbar-nav">
-          {/* Search Bar */}
-          <Form className="d-flex mx-auto" style={{ width: "50%" }}>
-            <FormControl
-              type="search"
-              placeholder="Cari barang..."
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">
-              <FontAwesomeIcon icon={faSearch} />
-            </Button>
-          </Form>
-
-          {/* Menu Kanan */}
-          <Nav className="ms-auto">
-            <Nav.Link href="#cart">
-              <FontAwesomeIcon icon={faShoppingCart} /> Keranjang
-            </Nav.Link>
-            <Nav.Link href="#login">
-              <FontAwesomeIcon icon={faUser} /> Masuk
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+          {/* Kolom untuk Menu Kanan */}
+          <div className="col-3">
+            <Nav className="justify-content-end">
+              <Nav.Link href="#cart">
+                <FontAwesomeIcon icon={faShoppingCart} /> Keranjang
+              </Nav.Link>
+              <Nav.Link href="#login">
+                <FontAwesomeIcon icon={faUser} /> Masuk
+              </Nav.Link>
+            </Nav>
+          </div>
+        </div>
       </Container>
     </Navbar>
   );
