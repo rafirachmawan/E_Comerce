@@ -1,37 +1,41 @@
 import React from "react";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
+import jersey1 from "../assets/images/jersey1.jpeg";
+import jersey2 from "../assets/images/jersey2.jpeg";
+import jersey3 from "../assets/images/jersey3.jpeg";
+import jersey4 from "../assets/images/jersey4.jpeg";
 
 const products = [
   {
     id: 1,
-    name: "Laptop",
+    name: "Jersey Sepak Bola  ",
     price: 10000000,
-    image: "https://via.placeholder.com/200x200?text=Laptop",
+    image: jersey1,
   },
   {
     id: 2,
-    name: "Smartphone",
+    name: "jersey Futsal",
     price: 5000000,
-    image: "https://via.placeholder.com/200x200?text=Smartphone",
+    image: jersey2,
   },
   {
     id: 3,
-    name: "Headphone",
+    name: "Jersey Voly",
     price: 1000000,
-    image: "https://via.placeholder.com/200x200?text=Headphone",
+    image: jersey3,
   },
   {
     id: 4,
-    name: "Keyboard",
+    name: "Jersey Pencak ",
     price: 800000,
-    image: "https://via.placeholder.com/200x200?text=Keyboard",
+    image: jersey4,
   },
 ];
 
 const ProductList = () => {
   return (
     <Container className="my-4">
-      <h2>Daftar Product</h2>
+      <h2>Katalog</h2>
       <Row>
         {products.map((product) => (
           <Col key={product.id} md={3} className="mb-4">
