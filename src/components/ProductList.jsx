@@ -31,7 +31,7 @@ const products = [
 const ProductList = () => {
   return (
     <Container className="my-4">
-      <h2>Daftar Barang</h2>
+      <h2>Daftar Product</h2>
       <Row>
         {products.map((product) => (
           <Col key={product.id} md={3} className="mb-4">
