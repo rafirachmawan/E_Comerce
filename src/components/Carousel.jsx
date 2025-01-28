@@ -2,21 +2,19 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import hijab1 from "../assets/images/hijab1.jpg";
-import hijab2 from "../assets/images/hijab2.jpg";
-import hijab3 from "../assets/images/hijab3.jpg";
+import banner1 from "../assets/images/baner.jpg"; // 1200x400
 
 const CustomCarousel = () => {
   const settings = {
-    dots: true, // Tampilkan indikator dots
-    infinite: true, // Infinite loop
-    speed: 500, // Kecepatan transisi (ms)
-    slidesToShow: 1, // Jumlah slide yang ditampilkan
-    slidesToScroll: 1, // Jumlah slide yang digeser
-    autoplay: true, // Autoplay
-    autoplaySpeed: 3000, // Interval autoplay (ms)
-    arrows: true, // Tampilkan panah navigasi
-    pauseOnHover: true, // Jeda autoplay saat hover
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    pauseOnHover: true,
   };
 
   return (
@@ -28,44 +26,50 @@ const CustomCarousel = () => {
         margin: "20px 0",
       }}
     >
-      <div style={{ width: "80%", maxWidth: "400px", textAlign: "center" }}>
+      <div style={{ width: "100%", maxWidth: "1200px", textAlign: "center" }}>
         <Slider {...settings}>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div>
             <img
-              src={hijab1} // Gunakan gambar yang diimpor
-              alt="Promo 1"
+              src={banner1}
+              alt="Banner 1"
               style={{
                 width: "100%",
                 height: "auto",
-                maxWidth: "200px",
+                maxHeight: "400px",
                 borderRadius: "10px",
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                transform: "scale(0.6)", // Zoom out menjadi 80%
+                transformOrigin: "center", // Memastikan gambar tetap di tengah
               }}
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div>
             <img
-              src={hijab2} // Gunakan gambar yang diimpor
-              alt="Promo 2"
+              src={banner1}
+              alt="Banner 2"
               style={{
                 width: "100%",
                 height: "auto",
-                maxWidth: "200px",
+                maxHeight: "400px",
                 borderRadius: "10px",
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                transform: "scale(0.6)", // Zoom out menjadi 80%
+                transformOrigin: "center", // Memastikan gambar tetap di tengah
               }}
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div>
             <img
-              src={hijab3} // Gunakan gambar yang diimpor
-              alt="Promo 3"
+              src={banner1}
+              alt="Banner 3"
               style={{
                 width: "100%",
                 height: "auto",
-                maxWidth: "200px",
+                maxHeight: "400px",
                 borderRadius: "10px",
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                transform: "scale(0.6)", // Zoom out menjadi 80%
+                transformOrigin: "center", // Memastikan gambar tetap di tengah
               }}
             />
           </div>
