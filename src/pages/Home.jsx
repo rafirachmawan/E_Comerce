@@ -3,6 +3,7 @@ import CustomCarousel from "../components/Carousel";
 import CustomNavbar from "../components/Navbar";
 import Product from "../components/Product";
 import ProductList from "../components/ProductList";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -33,6 +34,7 @@ const Home = () => {
       <CustomNavbar />
       <CustomCarousel />
       <ProductList />
+      <Footer />
 
       {/* backend */}
       {/* <h1>Produk Tersedia</h1>
